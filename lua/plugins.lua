@@ -78,9 +78,8 @@ return packer.startup(function(use)
     "neovim/nvim-lspconfig",
     event = "BufReadPre",
     requires = {
-      { "williamboman/nvim-lsp-installer" },
-      { "jose-elias-alvarez/null-ls.nvim", after = "nvim-lspconfig" },
-    }
+      { "williamboman/nvim-lsp-installer" }
+    },
   })
 
   -- Automatically set up your configuration after cloning packer.nvim
