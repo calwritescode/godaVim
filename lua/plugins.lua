@@ -23,7 +23,7 @@ vim.cmd [[
   augroup end
 ]]
 
--- Use a protected call so we don't error out on first use
+-- Use a protected call so we don"t error out on first use
 local packer_present, packer = pcall(require, "packer")
 if (not packer_present) then return end
 
@@ -38,7 +38,7 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use ({
+  use({
     "wbthomason/packer.nvim",
     "lewis6991/impatient.nvim", -- speeds up startupt time
     "nathom/filetype.nvim", -- replaces 800+ autocommands of filetype.vim with a single autocommand
@@ -47,10 +47,10 @@ return packer.startup(function(use)
   })
 
   -- Theming
-  use 'folke/tokyonight.nvim' -- colorscheme
+  use "folke/tokyonight.nvim" -- colorscheme
   use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   } -- lualine
 
 
@@ -64,12 +64,12 @@ return packer.startup(function(use)
           "rafamadriz/friendly-snippets" -- a bunch of snippets to use
         }
       },
-      {"hrsh7th/cmp-nvim-lsp", after = "nvim-cmp"}, -- lsp completion
-      {"hrsh7th/cmp-buffer", after = "nvim-cmp"}, -- buffer completions
-      {"hrsh7th/cmp-nvim-lua", after = "nvim-cmp"}, -- nvim lua api completion
-      {"hrsh7th/cmp-path", after = "nvim-cmp"}, -- path completion
-      {"hrsh7th/cmp-cmdline", after = "nvim-cmp"},
-      {"saadparwaiz1/cmp_luasnip", after = "nvim-cmp"}, -- lua snippet completion
+      { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" }, -- lsp completion
+      { "hrsh7th/cmp-buffer", after = "nvim-cmp" }, -- buffer completions
+      { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" }, -- nvim lua api completion
+      { "hrsh7th/cmp-path", after = "nvim-cmp" }, -- path completion
+      { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
+      { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" }, -- lua snippet completion
     }
   })
 
