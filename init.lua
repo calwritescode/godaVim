@@ -1,0 +1,6 @@
+require "options"
+require "keymaps"
+require "plugins"
+require "theme"
+require "plugins.cmp"
+require "plugins.lualine"
