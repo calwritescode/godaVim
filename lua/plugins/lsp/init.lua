@@ -47,6 +47,6 @@ lspconfig.util.default_config = vim.tbl_extend(
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 for _, server in ipairs(installer.get_installed_servers()) do
-  local opts = require('plugins.lsp.serve.' .. server.name)
+  local opts = require('plugins.lsp.servers.' .. server.name)
   lspconfig[server.name].setup(opts)
 end
