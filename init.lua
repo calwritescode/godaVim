@@ -5,4 +5,3 @@ require "theme"
 require "plugins.lualine"
 require "plugins.cmp"
 require "plugins.lsp"
-

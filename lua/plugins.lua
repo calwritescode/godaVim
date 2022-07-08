@@ -74,13 +74,10 @@ return packer.startup(function(use)
   })
 
   -- LSP
-  use({
+  use {
+    "williamboman/nvim-lsp-installer",
     "neovim/nvim-lspconfig",
-    event = "BufReadPre",
-    requires = {
-      { "williamboman/nvim-lsp-installer" }
-    },
-  })
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
