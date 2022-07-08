@@ -38,13 +38,13 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use({
+  use {
     "wbthomason/packer.nvim",
     "lewis6991/impatient.nvim", -- speeds up startupt time
     "nathom/filetype.nvim", -- replaces 800+ autocommands of filetype.vim with a single autocommand
     "nvim-lua/plenary.nvim", -- lib of lua functions; used by telescope, gitsigns,..
     "nvim-lua/popup.nvim", -- enables vim like popups
-  })
+  }
 
   -- Theming
   use "folke/tokyonight.nvim" -- colorscheme
@@ -64,12 +64,12 @@ return packer.startup(function(use)
           "rafamadriz/friendly-snippets" -- a bunch of snippets to use
         }
       },
-      { "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" }, -- lsp completion
-      { "hrsh7th/cmp-buffer", after = "nvim-cmp" }, -- buffer completions
-      { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" }, -- nvim lua api completion
-      { "hrsh7th/cmp-path", after = "nvim-cmp" }, -- path completion
-      { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
-      { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" }, -- lua snippet completion
+      { "hrsh7th/cmp-nvim-lsp" }, -- lsp completion
+      { "hrsh7th/cmp-buffer" }, -- buffer completions
+      { "hrsh7th/cmp-nvim-lua" }, -- nvim lua api completion
+      { "hrsh7th/cmp-path" }, -- path completion
+      { "hrsh7th/cmp-cmdline" },
+      { "saadparwaiz1/cmp_luasnip" }, -- lua snippet completion
     }
   })
 

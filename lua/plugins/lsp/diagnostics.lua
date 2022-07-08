@@ -9,13 +9,10 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
-local config = {
+vim.diagnostic.config({
   -- disable virtual text
   virtual_text = false,
-  -- show signs
-  signs = true,
   update_in_insert = true,
-  underline = true,
   severity_sort = true,
   float = {
     focusable = false,
@@ -25,6 +22,4 @@ local config = {
     header = "",
     prefix = "",
   },
-}
-
-vim.diagnostic.config(config)
+})
