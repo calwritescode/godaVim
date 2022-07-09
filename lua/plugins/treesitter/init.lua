@@ -8,7 +8,9 @@ treesitter.setup {
   ensure_installed = { 'comment', 'css', 'fish', 'html', 'javascript', 'jsdoc', 'json', 'json5', 'lua', 'markdown',
     'markdown_inline', 'prisma', 'regex', 'scss', 'tsx', 'typescript', 'yaml' },
   sync_install = false,
-  auto_install = true,
+  autopairs = {
+    enable = true,
+  },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = true,
@@ -25,3 +27,5 @@ treesitter.setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
+
+require 'plugins.treesitter.autopairs'.init()
